@@ -1,0 +1,22 @@
+$default-size: 100px;
+
+#play_song {
+	font-size: $default-size;
+	cursor: pointer;
+}
+
+#previous_song {
+	@extend #play_song;
+}
+
+#pause_song {
+	@extend #play_song;
+}
+
+#random_song {
+	@extend #play_song;
+}
+
+#next_song {
+	@extend #play_song;
+}

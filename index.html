@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vocaloid Jukebox</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<audio id="song1" source src="https://ia801004.us.archive.org/33/items/vocaloid-music-collection-2011/1527%20-%20FREELY%20TOMORROW%20-%20sm15172108.mp3" type="audio/mpeg" preload="auto"></audio>
+	<div class="display">
+		<h2 id="name1">Freely Tomorrow</h2>
+		<h2 id="composer1">Mitchie-M</h2>
+	</div>
+	<span class="glyphicon glyphicon-step-backward" id="previous_song" onclick="vocaloid.previous()" aria-hidden="true"></span>
+	<span class="glyphicon glyphicon-play" id="play_song" onclick="vocaloid.play()" aria-hidden="true"></span>
+	<span class="glyphicon glyphicon-pause" id="pause_song" onclick="vocaloid.pause()" aria-hidden="true"></span>
+	<span class="glyphicon glyphicon-random" id="random_song" onclick="vocaloid.random()" aria-hidden="true"></span>
+	<span class="glyphicon glyphicon-step-forward" id="next_song" onclick="vocaloid.next()" aria-hidden="true"></span>
+	<div class="main">
+		<div id="form">
+			<h2>Add a song!</h2>
+			<p>Title</p>
+			<input type="text" id="title_input"><br><br>
+			<p>Composer</p>
+			<input type="text" id="composer_input"><br><br>
+			<p>Song URL</p>
+			<input type="text" id="song_input"><br><br>
+			<button id="insert" type="button" onclick="vocaloid.insert()">Submit</button><br>
+		</div>
+		<ul id="playlist"></ul>
+	</div>
+	<img src="http://safebooru.org//images/867/36a26e977c84bd92aa6ea7023acd3571e5690401.png">
+	<script src="main.js"></script>
+</body>
+</html>
